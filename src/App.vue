@@ -1,9 +1,12 @@
 <!-- the script is where the js code goes -->
 <script setup>
 import { ref } from "vue" // you need this to use ref()
+const SpeciesName = ["Abelia floribunda", "Abelia triflora", "Abelia umbellata", "Abelia x Edward Goucher", "Abelia x grandiflora", "Abies alba", "Abies balsamea"]
 let extraname = ref("generate species")
-function species() {
-    
+let selectedSpecies = ref("");
+function PickRandomSpecies() {
+const randomIndex = Math.floor(Math.random() * SpeciesName.length);
+selectedSpecies.value = SpeciesName[randomIndex]; 
 }
 </script> 
 
@@ -17,7 +20,8 @@ function species() {
 <div id="flex">
     <div id="empty" class="container"></div>
     <div id="main" class="container"> <!--{{ extraname }} // title without button function--> 
-<button @click="species">{{ extraname }}</button>
+<button @click="PickRandomSpecies">{{ extraname }}</button>
+<p>{{ selectedSpecies }}</p>
         <div id="video-container">
             <video controls 
             width="1120" 
