@@ -35,17 +35,15 @@ selectedSpecies.value = SpeciesName[randomIndex];
         </div>
     </div>
     <div id="sidebar" class="container">
-        <div id="image" class="sidebar-item">
-            <img src="https://w7.pngwing.com/pngs/1007/856/png-transparent-white-and-black-cow-cattle-sheep-calf-goat-live-cow-animals-cow-goat-family-snout-thumbnail.png">
-        </div>
+
         <div id="text1" class="sidebar-item">
-            <p>home</p>
+            <p>plant type</p>
         </div>
         <div id="text2" class="sidebar-item">
-            <p>projects</p>
+            <p>native country</p>
         </div>
         <div id="text3" class="sidebar-item">
-            <p>learn</p>
+            <p>water needs</p>
         </div>
     </div>
 </div>
@@ -142,27 +140,26 @@ div {
     justify-content: left;
     align-items: center;
     z-index: 1; /* Set a higher z-index to place it in front of the video */
+    margin-top: 50px; 
 }
 
 .sidebar-item {
-    margin-bottom: 50px;
+
+    margin-bottom: 200px;
 }
 
 .sidebar-item p {
     transform: rotate(90deg);
     white-space: nowrap;
     overflow: hidden;
-    transform-origin: 0 5;
+    transform-origin: center;
     color: white; /* Set text color to white */
   font-family: Helvetica, sans-serif; /* Set font-family to Helvetica */
   font-size: 27px;
   font-weight: bold;
 }
 
-.sidebar-item img {
-    width: 40px; /* Adjust the width of the small icon */
-    height: 50px; /* Adjust the height of the small icon */
-}
+
 
 /* .container {
     border-color: rgb(60, 255, 0);
