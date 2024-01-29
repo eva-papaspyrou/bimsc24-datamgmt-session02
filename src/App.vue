@@ -20,7 +20,7 @@ selectedSpecies.value = SpeciesName[randomIndex];
 <div id="flex">
     <div id="empty" class="container"></div>
 
-    <div id="main" class="container"> 
+    <div id="main" class="maincontainer"> 
 <button @click="PickRandomSpecies">{{ extraname }}</button>
 <p class="selectedSpecies">{{ selectedSpecies }}</p>
         <div id="video-container">
@@ -87,7 +87,7 @@ html {
 }
 
 body {
-    background-image: url('https://raw.githubusercontent.com/jose-villegas/HeightmapGenerator/master/HeightmapGenerator/Resources/perlin_1.BMP');
+    background-image: url('https://www.jvm-gaming.org/uploads/default/original/2X/0/0a3b9a4f53efe8803a53f2e1251a29840a888dd5.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -111,16 +111,10 @@ div {
 }
 #main {
   width: 75%;
- /* position: relative;
-  z-index: 1;
-  color: white;
-  font-family: Helvetica, sans-serif;
-  font-size: 27px;
-  font-weight: bold; */ /*for title without button */
 }
 #main button {
-  color: white; /* Set text color to white */
-  font-family: Helvetica, sans-serif; /* Set font-family to Helvetica */
+  color: white; 
+  font-family: Helvetica, sans-serif; 
   font-size: 25px;
   font-weight: bold;
   background-color: transparent; /* Make the button background transparent */
@@ -131,6 +125,7 @@ div {
 
 #main button:hover {
   background-color: #ffffff33; /* Add a subtle background color on hover */
+  
 }
 #main .selectedSpecies {
   color: rgb(255, 255, 255); /* Set your desired text color */
@@ -171,10 +166,10 @@ div {
 
 
 
-/* .container {
-    border-color: rgb(60, 255, 0);
-    border-style: dotted;
+ .maincontainer {
+    border-color: rgb(51, 255, 0);
+    border-style:dashed;
     border-width: 1px;
-} */
+} 
 
 </style>
