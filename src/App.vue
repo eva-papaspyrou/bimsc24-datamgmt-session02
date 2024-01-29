@@ -1,9 +1,11 @@
 <!-- the script is where the js code goes -->
 <script setup>
 import { ref } from "vue" // you need this to use ref()
-
-
-</script>
+let extraname = ref("generate species")
+function species() {
+    
+}
+</script> 
 
 
 
@@ -14,8 +16,8 @@ import { ref } from "vue" // you need this to use ref()
 
 <div id="flex">
     <div id="empty" class="container"></div>
-    <div id="main" class="container">main content
-
+    <div id="main" class="container"> <!--{{ extraname }} // title without button function--> 
+<button @click="species">{{ extraname }}</button>
         <div id="video-container">
             <video controls 
             width="1120" 
@@ -105,14 +107,32 @@ div {
     width: 15%;
 }
 #main {
-    width: 80%;
-    position: relative;
-    z-index: 1; /* Set a higher z-index to place it in front of the video */
+  width: 75%;
+ /* position: relative;
+  z-index: 1;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 27px;
+  font-weight: bold; */ /*for title without button */
+}
+#main button {
+  color: white; /* Set text color to white */
+  font-family: Helvetica, sans-serif; /* Set font-family to Helvetica */
+  font-size: 50px;
+  font-weight: bold;
+  background-color: transparent; /* Make the button background transparent */
+  border: none; /* Remove the button border */
+  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  padding: 10px 20px; /* Add padding for better styling */
+}
+
+#main button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Add a subtle background color on hover */
 }
 /* VIDEO */
 /* size */
 #sidebar {
-    width: 5%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: left;
