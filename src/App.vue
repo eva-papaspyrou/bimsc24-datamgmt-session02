@@ -1,7 +1,7 @@
 <!-- the script is where the js code goes -->
 <script setup>
 import { ref } from "vue" // you need this to use ref()
-const SpeciesName = ["Abelia floribunda", "Abelia triflora", "Abelia umbellata", "Abelia x Edward Goucher", "Abelia x grandiflora", "Abies alba", "Abies balsamea"]
+const SpeciesName = ["Abelia floribunda", "Abelia triflora", "Abelia umbellata", "Abelia x Edward Goucher", "Abelia x grandiflora", "Abies alba", "Abies balsamea", "Krossa Regal Hotels", "Lagerstroemia speciosa", "Mahonia aquifolium", "Nepeta nervosa"]
 let extraname = ref("generate species")
 let selectedSpecies = ref("");
 function PickRandomSpecies() {
@@ -19,9 +19,10 @@ selectedSpecies.value = SpeciesName[randomIndex];
 
 <div id="flex">
     <div id="empty" class="container"></div>
-    <div id="main" class="container"> <!--{{ extraname }} // title without button function--> 
+
+    <div id="main" class="container"> 
 <button @click="PickRandomSpecies">{{ extraname }}</button>
-<p>{{ selectedSpecies }}</p>
+<p class="selectedSpecies">{{ selectedSpecies }}</p>
         <div id="video-container">
             <video controls 
             width="1120" 
@@ -120,7 +121,7 @@ div {
 #main button {
   color: white; /* Set text color to white */
   font-family: Helvetica, sans-serif; /* Set font-family to Helvetica */
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
   background-color: transparent; /* Make the button background transparent */
   border: none; /* Remove the button border */
@@ -129,10 +130,19 @@ div {
 }
 
 #main button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Add a subtle background color on hover */
+  background-color: #ffffff33; /* Add a subtle background color on hover */
 }
-/* VIDEO */
-/* size */
+#main .selectedSpecies {
+  color: rgb(255, 255, 255); /* Set your desired text color */
+  -webkit-text-stroke: 1px hsl(335, 100%, 50%);
+  font-family: Helvetica, sans-serif; /* Set your desired font-family */
+  font-size: 130px; /* Set your desired font size */
+  font-weight: bold; /* Set your desired font weight */
+  font-style: italic;
+  text-align: center;
+
+}
+
 #sidebar {
     width: 15%;
     display: flex;
@@ -155,7 +165,7 @@ div {
     transform-origin: center;
     color: white; /* Set text color to white */
   font-family: Helvetica, sans-serif; /* Set font-family to Helvetica */
-  font-size: 27px;
+  font-size: 25px;
   font-weight: bold;
 }
 
